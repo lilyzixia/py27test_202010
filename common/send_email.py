@@ -12,7 +12,7 @@ from common.handle_path import REPORT_DIR
 
 def send_msg():
     smtp=smtplib.SMTP_SSL(host='smtp.qq.com',port=465)
-    smtp.login(user='709737032@qq.com',password='imlnyopfmwgnbchi')
+    smtp.login(user='709737032@qq.com',password='evrqlivgmurqbcjf')
 
     msg=MIMEMultipart()
     msg['Subject']='测试报告1'
