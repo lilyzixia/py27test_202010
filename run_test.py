@@ -12,6 +12,7 @@ Time:2020/8/30 12:20
 
 
 import unittest
+import os
 from BeautifulReport import BeautifulReport
 from common.handle_path import TESTCASE_DIR,REPORT_DIR
 from common.handler_log import log
@@ -27,10 +28,11 @@ suite.addTest(loader.discover(TESTCASE_DIR))
 # br.report('测试接口',filename='portreport.html',report_dir=REPORT_DIR)
 
 
-runner=HTMLTestRunner(stream=open('report.html','wb'),
+runner=HTMLTestRunner(stream=open(os.path.join(REPORT_DIR,'report.html'),'wb'),
                       title='27期测试报告',
                       tester='lisa',
-                      description='第一个版本的测试')
+                      description='第一个版本的测试',
+                      )
 runner.run(suite)
 
 

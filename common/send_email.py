@@ -22,7 +22,7 @@ def send_msg():
     text=MIMEText(_text='您好，测试报告已发，请注意查收！',_charset='utf-8')
     msg.attach(text)
 
-    with open(os.path.join(REPORT_DIR,'portreport.html'), 'rb')as f:
+    with open(os.path.join(REPORT_DIR,'report.html'), 'rb')as f:
         content=f.read()
 
     report=MIMEApplication(content)
